@@ -1,17 +1,15 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args){
 
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
+        File archivo;
+        FileReader fr ;
+        BufferedReader br;
 
-        List<Persona> personas = new ArrayList<Persona>();
-        int j = 0;
+        List<Persona> personas = new ArrayList<>();
        try{
            archivo = new File ("C:\\Users\\javier.jimenez\\Desktop\\EjerciciosNXT\\JV2\\personas.txt");
            fr = new FileReader (archivo);
