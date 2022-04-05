@@ -20,6 +20,7 @@ public class Main {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(":");
 
+
                 if (partes.length > 2) {
 
                     Persona persona = new Persona();
@@ -42,7 +43,5 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }
