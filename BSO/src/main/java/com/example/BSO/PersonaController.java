@@ -16,8 +16,8 @@ public class PersonaController {
 
 
     @PostMapping("/useradd")
-    public ResponseEntity<Persona> addUser(@RequestBody Persona persona) {
-        persona.setEdad(persona.getEdad()+1);
+    public ResponseEntity<Persona> addPersona(@RequestBody Persona persona) {
+        persona.setAgePlusOne();
         return ResponseEntity.ok(persona);
     }
 }

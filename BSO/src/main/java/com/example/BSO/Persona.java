@@ -9,5 +9,10 @@ import lombok.Data;
         private String nombre;
         private String poblacion;
         private Integer edad;
-    }
 
+
+        public void setAgePlusOne() {
+            this.setEdad(this.getEdad()+1) ;
+        }
+
+    }
