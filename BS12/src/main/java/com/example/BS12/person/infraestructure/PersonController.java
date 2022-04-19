@@ -1,14 +1,11 @@
 package com.example.BS12.person.infraestructure;
 
-import com.example.BS12.person.domain.services.PersonService;
+import com.example.BS12.person.application.PersonService;
 import com.example.BS12.person.infraestructure.dto.PersonInputDTO;
-import com.example.BS12.person.infraestructure.dto.PersonOutputDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET})
 @RestController

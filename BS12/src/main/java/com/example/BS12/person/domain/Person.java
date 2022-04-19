@@ -1,4 +1,4 @@
-package com.example.BS12.person.domain.models;
+package com.example.BS12.person.domain;
 
 
 import com.example.BS12.StringPrefixedSequenceIdGenerator;

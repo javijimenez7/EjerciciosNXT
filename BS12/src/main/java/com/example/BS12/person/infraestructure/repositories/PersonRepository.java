@@ -1,7 +1,7 @@
-package com.example.BS12.person.domain.repositories;
+package com.example.BS12.person.infraestructure.repositories;
 
 
-import com.example.BS12.person.domain.models.Person;
+import com.example.BS12.person.domain.Person;
 import com.example.BS12.person.infraestructure.dto.PersonOutputDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 

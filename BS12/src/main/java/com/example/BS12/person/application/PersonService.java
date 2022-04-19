@@ -1,8 +1,9 @@
-package com.example.BS12.person.domain.services;
+package com.example.BS12.person.application;
 
 
-import com.example.BS12.person.domain.models.Person;
-import com.example.BS12.person.domain.repositories.PersonRepository;
+import com.example.BS12.person.application.mappers.PersonMapper;
+import com.example.BS12.person.domain.Person;
+import com.example.BS12.person.infraestructure.repositories.PersonRepository;
 import com.example.BS12.person.infraestructure.dto.PersonInputDTO;
 import com.example.BS12.person.infraestructure.dto.PersonOutputDTO;
 
@@ -23,9 +24,9 @@ public class PersonService implements PersonI {
     @Override
     public PersonOutputDTO addPerson(PersonInputDTO personDTO) throws Exception{
 
-            Person person = new Person(personDTO);
+            Person person = PersonMapper.INSTANCE.PersonInputToPerson(personDTO);
             personRepository.save(person);
-            PersonOutputDTO saveOutputDTO = new PersonOutputDTO(person);
+            PersonOutputDTO saveOutputDTO = PersonMapper.INSTANCE.PersonToPersonOutput(person);
             return saveOutputDTO;
 
 

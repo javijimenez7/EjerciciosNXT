@@ -1,6 +1,6 @@
-package com.example.BS12.person.domain.services;
+package com.example.BS12.person.application;
 
-import com.example.BS12.person.domain.models.Person;
+import com.example.BS12.person.domain.Person;
 import com.example.BS12.person.infraestructure.dto.PersonInputDTO;
 import com.example.BS12.person.infraestructure.dto.PersonOutputDTO;
 

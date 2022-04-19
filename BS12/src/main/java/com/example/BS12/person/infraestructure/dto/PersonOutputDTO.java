@@ -1,7 +1,7 @@
 package com.example.BS12.person.infraestructure.dto;
 
 
-import com.example.BS12.person.domain.models.Person;
+import com.example.BS12.person.domain.Person;
 import lombok.Getter;
 import lombok.Setter;
 
