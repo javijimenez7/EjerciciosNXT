@@ -16,8 +16,10 @@ import java.util.List;
 public class PersonService implements PersonI {
 
 
+    //repositorio person
     @Autowired
     private PersonRepository personRepository;
+
 
 
 
