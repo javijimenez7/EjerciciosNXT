@@ -2,16 +2,14 @@ package com.example.BS12.person.infraestructure.dto;
 
 
 import com.example.BS12.person.domain.Person;
-import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class PersonInputDTO {
     private String person_id;
 
@@ -27,4 +25,22 @@ public class PersonInputDTO {
     private String imagen_url;
     private Date termination_date;
 
+    public PersonInputDTO(Person person){
+        setPerson_id(person.getPerson_id());
+        setActive(person.getActive());
+        setCity(person.getCity());
+        setCompany_email(person.getCompany_email());
+        setImagen_url(person.getImagen_url());
+        setName(person.getName());
+        setSurname(person.getSurname());
+        setPassword(person.getPassword());
+        setPersonal_email(person.getPersonal_email());
+        setUser(person.getUser());
+        setTermination_date(person.getTermination_date());
+
+    }
+
+    public PersonInputDTO(){
+
+    }
 }

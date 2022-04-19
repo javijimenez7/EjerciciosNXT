@@ -1,7 +1,7 @@
 package com.example.BS12.person.application;
 
 
-import com.example.BS12.person.application.mappers.PersonMapper;
+
 import com.example.BS12.person.domain.Person;
 import com.example.BS12.person.infraestructure.repositories.PersonRepository;
 import com.example.BS12.person.infraestructure.dto.PersonInputDTO;
@@ -24,10 +24,10 @@ public class PersonService implements PersonI {
     @Override
     public PersonOutputDTO addPerson(PersonInputDTO personDTO) throws Exception{
 
-            Person person = PersonMapper.INSTANCE.PersonInputToPerson(personDTO);
+            Person person = new Person(personDTO);
             personRepository.save(person);
-            PersonOutputDTO saveOutputDTO = PersonMapper.INSTANCE.PersonToPersonOutput(person);
-            return saveOutputDTO;
+        PersonOutputDTO saveOutputDTO = new PersonOutputDTO(person);
+        return saveOutputDTO;
 
 
     }
