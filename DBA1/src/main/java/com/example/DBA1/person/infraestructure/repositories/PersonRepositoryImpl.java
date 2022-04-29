@@ -52,7 +52,12 @@ public class PersonRepositoryImpl {
 
 
         query.select(root).where(predicates.toArray(new Predicate[predicates.size()])).orderBy(ord[0]);
-        return entityManager.createQuery(query).getResultList();
+        int firstResult = Integer.parseInt((String) conditions.get("pageIndex"));
+        int maxResults = 10;
+        if(conditions.containsKey("pageSize")){
+            maxResults= Integer.parseInt((String) conditions.get("pageSize"));
+        }
+        return entityManager.createQuery(query).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
 
 }
